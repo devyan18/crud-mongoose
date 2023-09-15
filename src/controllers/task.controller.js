@@ -59,7 +59,7 @@ export const ctrlDeleteTask = async (req, res) => {
   const taskId = req.params.id
 
   try {
-    await TaskModel.findOneAndDelete(taskId)
+    await TaskModel.findByIdAndDelete(taskId)
     res.sendStatus(202)
   } catch (error) {
     console.log(error)

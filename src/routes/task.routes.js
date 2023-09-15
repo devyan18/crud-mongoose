@@ -14,6 +14,6 @@ taskRouter.post('/', ctrlCreateNewTask)
 
 taskRouter.get('/:id', ctrlGetTaskById)
 taskRouter.put('/:id', ctrlUpdateTask)
-taskRouter.delete('/id', ctrlDeleteTask)
+taskRouter.delete('/:id', ctrlDeleteTask)
 
 export { taskRouter }
