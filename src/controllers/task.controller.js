@@ -4,7 +4,9 @@ export const ctrlCreateNewTask = async (req, res) => {
   const { content } = req.body
 
   try {
-    const newTask = await TaskModel.create({ content })
+    const newTask = new TaskModel({ content })
+
+    await newTask.save()
 
     res.status(201).json(newTask)
   } catch (error) {
